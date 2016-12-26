@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :chat_rooms
+  resources :messages
   resources :activities
   resources :lectures
   resources :news
