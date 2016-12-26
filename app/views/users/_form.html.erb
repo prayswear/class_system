@@ -1,0 +1,72 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_num %>
+    <%= f.text_field :student_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :admin %>
+    <%= f.check_box :admin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :id_num %>
+    <%= f.text_field :id_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.check_box :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobile_num %>
+    <%= f.text_field :mobile_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flat_num %>
+    <%= f.number_field :flat_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dorm_num %>
+    <%= f.number_field :dorm_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_num %>
+    <%= f.number_field :room_num %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
