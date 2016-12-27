@@ -2,7 +2,7 @@
 
 one:
   title: MyString
-  type: 1
+  lec_type: 1
   teacher: MyString
   site: MyString
   time: MyString
@@ -10,7 +10,7 @@ one:
 
 two:
   title: MyString
-  type: 1
+  lec_type: 1
   teacher: MyString
   site: MyString
   time: MyString

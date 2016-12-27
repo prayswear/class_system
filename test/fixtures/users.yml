@@ -1,26 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  student_num: MyString
-  password: MyString
-  admin: false
   name: MyString
-  id_num: MyString
-  sex: false
   email: MyString
+  sex: false
   mobile_num: MyString
   flat_num: 1
   dorm_num: 1
   room_num: 1
 
 two:
-  student_num: MyString
-  password: MyString
-  admin: false
   name: MyString
-  id_num: MyString
-  sex: false
   email: MyString
+  sex: false
   mobile_num: MyString
   flat_num: 1
   dorm_num: 1

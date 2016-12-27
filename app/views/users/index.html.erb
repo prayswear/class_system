@@ -5,13 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Student num</th>
-      <th>Password</th>
-      <th>Admin</th>
       <th>Name</th>
-      <th>Id num</th>
-      <th>Sex</th>
       <th>Email</th>
+      <th>Sex</th>
       <th>Mobile num</th>
       <th>Flat num</th>
       <th>Dorm num</th>
@@ -23,13 +19,9 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.student_num %></td>
-        <td><%= user.password %></td>
-        <td><%= user.admin %></td>
         <td><%= user.name %></td>
-        <td><%= user.id_num %></td>
-        <td><%= user.sex %></td>
         <td><%= user.email %></td>
+        <td><%= user.sex %></td>
         <td><%= user.mobile_num %></td>
         <td><%= user.flat_num %></td>
         <td><%= user.dorm_num %></td>

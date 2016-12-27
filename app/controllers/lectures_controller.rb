@@ -69,6 +69,6 @@ class LecturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lecture_params
-      params.require(:lecture).permit(:title, :type, :teacher, :site, :time, :content)
+      params.require(:lecture).permit(:title, :lec_type, :teacher, :site, :time, :content)
     end
 end
