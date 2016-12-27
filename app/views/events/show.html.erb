@@ -2,23 +2,23 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @news.title %>
+  <%= @event.title %>
 </p>
 
 <p>
   <strong>Abstract:</strong>
-  <%= @news.abstract %>
+  <%= @event.abstract %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @news.content %>
+  <%= @event.content %>
 </p>
 
 <p>
   <strong>Confirm:</strong>
-  <%= @news.confirm %>
+  <%= @event.confirm %>
 </p>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

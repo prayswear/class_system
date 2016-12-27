@@ -1,6 +1,69 @@
-<h1>Editing User</h1>
+<h1>Editing</h1>
 
-<%= render 'form', user: @user %>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_num %>
+    <%= @user.student_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field" >
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+  </div>
+  <div class="field">
+      <%= f.label :password_confirmation , "Confirmation"%> 
+      <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.check_box :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobile_num %>
+    <%= f.text_field :mobile_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flat_num %>
+    <%= f.number_field :flat_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dorm_num %>
+    <%= f.number_field :dorm_num %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_num %>
+    <%= f.number_field :room_num %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save changes" %>
+  </div>
+<% end %>
 <%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to "Home", root_path%>

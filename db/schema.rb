@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161227105621) do
+ActiveRecord::Schema.define(version: 20161227162539) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.string   "site"
     t.string   "time"
+    t.text     "content"
+    t.string   "confirm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.string   "abstract"
     t.text     "content"
     t.string   "confirm"
     t.datetime "created_at", null: false
@@ -52,13 +61,19 @@ ActiveRecord::Schema.define(version: 20161227105621) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.boolean  "sex"
+    t.boolean  "sex",             default: false
     t.string   "mobile_num"
     t.integer  "flat_num"
     t.integer  "dorm_num"
     t.integer  "room_num"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "password_digest"
+    t.boolean  "admin",           default: false
+    t.string   "student_num"
+    t.string   "remember_token"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
+    t.index ["student_num"], name: "index_users_on_student_num", unique: true
   end
 
 end

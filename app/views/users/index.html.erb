@@ -26,9 +26,9 @@
         <td><%= user.flat_num %></td>
         <td><%= user.dorm_num %></td>
         <td><%= user.room_num %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -37,3 +37,4 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<%= link_to "Home", root_path%>

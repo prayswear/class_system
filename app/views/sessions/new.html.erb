@@ -1,0 +1,22 @@
+<h1>Sign in<h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(:session, url: sessions_path) do |f| %>
+			<%= f.label :student_num %> 
+			<%= f.text_field :student_num %>
+			<%= f.label :password %> 
+			<%= f.password_field :password %> 
+			<%= f.submit "Sign in"%>
+		<% end %> 
+		<p>New user? <%= link_to "Sign up now!", signup_path %>
+		</p>
+	</div>
+</div>rails 
+<p>
+<%= link_to "Home", root_path%>
+<%= link_to "Help",help_path %>
+<%= link_to "About",about_path %>
+
+
+</p>
